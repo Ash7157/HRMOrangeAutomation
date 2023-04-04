@@ -6,10 +6,12 @@
       <class name="testPackage.LoginTestClass">
         <methods>
           <include name="VerifyLoginFunctionalityWithCorrectData"/>
+          <include name="beforeTest"/>
+          <include name="VerifyLoginFunctionalityWithInCorrectData"/>
           <include name="beforemethod"/>
-          <include name="aftermethod"/>
-          <include name="afterclass"/>
+          <include name="aftertest"/>
           <include name="beforeclass"/>
+          <include name="aftermethod"/>
         </methods>
       </class> <!-- testPackage.LoginTestClass -->
     </classes>

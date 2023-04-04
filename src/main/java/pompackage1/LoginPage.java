@@ -26,6 +26,9 @@ public class LoginPage
 	@FindBy(xpath = "//span[contains(.,'Admin')]")
 	private WebElement admin;
 	
+//	@FindBy(xpath = "//img[@alt=\\\"client brand banner\\\"]/ancestor::a")
+//	private WebElement webdriverscreenshoot;
+	
 	public LoginPage(WebDriver driver) throws InterruptedException				//Constructor use name of class
 	{
 		this.driver=driver;
@@ -70,4 +73,11 @@ public class LoginPage
 		boolean result = admin.isDisplayed();
 		return result;
 	}
+	
+//	public boolean ScreenShootOfWebDriver()
+//	{
+//		boolean result1 = webdriverscreenshoot.isDisplayed();
+//		return result1;
+//	}
+
 }

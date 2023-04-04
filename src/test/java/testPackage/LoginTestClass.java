@@ -1,9 +1,16 @@
 package testPackage;
 
+import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -13,6 +20,7 @@ import org.testng.asserts.SoftAssert;
 
 import pompackage1.LoginPage;
 import testUtility.ReadFileData;
+import testUtility.Screenshot;
 
 
 public class LoginTestClass extends BaseClass
@@ -53,11 +61,20 @@ public class LoginTestClass extends BaseClass
 //		  login.sendPassword();
 		  login.sendPassword(r.fetchDataFromExcel(8,1));
 		  login.ClickOnLoginButton();
+		  
+		  Thread.sleep(3000);
 		 
 //		  String ExpectedURL="https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
 //		  String CurrentURL = driver.getCurrentUrl();
 		  
 		  boolean result=login.CheckVisibilityofAdminTab();
+		  
+		  WebElement el = driver.findElement(By.xpath("//img[@alt=\"client brand banner\"]/ancestor::a"));
+		  File source = el.getScreenshotAs(OutputType.FILE);
+		  File dest = new File("C:\\Users\\HP\\eclipse-workspace\\HRMOrange\\test-output\\Screenshots");
+		  FileHandler.copy(source, dest);
+		  
+//		  boolean result1 = login.ScreenShootOfWebDriver();
 		  
 //		  Assert.assertEquals(CurrentURL, ExpectedURL);
 //		  s.assertEquals(CurrentURL, ExpectedURL);
@@ -67,6 +84,7 @@ public class LoginTestClass extends BaseClass
 		  Assert.assertTrue(result);
 		  System.out.println("Test Case is Ended");
 		  s.assertAll();
+		  logger.pass("Test Case is Pass");
 	}
 	
 	@Test

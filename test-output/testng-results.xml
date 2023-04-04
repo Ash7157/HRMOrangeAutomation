@@ -1,40 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="4" passed="1" failed="1" skipped="0">
+<testng-results ignored="2" total="4" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-30T10:22:07 IST" name="Suite" finished-at="2023-03-30T10:24:43 IST" duration-ms="156722">
+  <suite started-at="2023-04-01T15:49:51 IST" name="Suite" finished-at="2023-04-01T15:51:57 IST" duration-ms="126761">
     <groups>
     </groups>
-    <test started-at="2023-03-30T10:22:07 IST" name="Test" finished-at="2023-03-30T10:24:43 IST" duration-ms="156722">
+    <test started-at="2023-04-01T15:49:51 IST" name="Test" finished-at="2023-04-01T15:51:57 IST" duration-ms="126761">
       <class name="testPackage.LoginTestClass">
-        <test-method is-config="true" signature="beforeclass()[pri:0, instance:testPackage.LoginTestClass@49ec71f8]" started-at="2023-03-30T10:23:59 IST" name="beforeclass" finished-at="2023-03-30T10:24:00 IST" duration-ms="501" status="PASS">
+        <test-method is-config="true" signature="beforeclass()[pri:0, instance:testPackage.LoginTestClass@49ec71f8]" started-at="2023-04-01T15:51:21 IST" name="beforeclass" finished-at="2023-04-01T15:51:22 IST" duration-ms="491" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeclass -->
-        <test-method is-config="true" signature="beforemethod()[pri:0, instance:testPackage.LoginTestClass@49ec71f8]" started-at="2023-03-30T10:24:00 IST" name="beforemethod" finished-at="2023-03-30T10:24:00 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:testPackage.LoginTestClass@49ec71f8]" started-at="2023-04-01T15:51:22 IST" name="beforemethod" finished-at="2023-04-01T15:51:22 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforemethod -->
-        <test-method signature="VerifyLoginFunctionalityWithCorrectData()[pri:0, instance:testPackage.LoginTestClass@49ec71f8]" started-at="2023-03-30T10:24:00 IST" name="VerifyLoginFunctionalityWithCorrectData" finished-at="2023-03-30T10:24:39 IST" duration-ms="38931" status="PASS">
+        <test-method signature="VerifyLoginFunctionalityWithCorrectData()[pri:0, instance:testPackage.LoginTestClass@49ec71f8]" started-at="2023-04-01T15:51:22 IST" name="VerifyLoginFunctionalityWithCorrectData" finished-at="2023-04-01T15:51:53 IST" duration-ms="31228" status="FAIL">
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[C:\Users\HP\eclipse-workspace\HRMOrange\test-output\Screenshots (Access is denied)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: C:\Users\HP\eclipse-workspace\HRMOrange\test-output\Screenshots (Access is denied)
+at java.base/java.io.FileOutputStream.open0(Native Method)
+at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:136)
+at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:115)
+at testPackage.LoginTestClass.VerifyLoginFunctionalityWithCorrectData(LoginTestClass.java:75)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyLoginFunctionalityWithCorrectData -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:testPackage.LoginTestClass@49ec71f8]" started-at="2023-03-30T10:24:39 IST" name="aftermethod" finished-at="2023-03-30T10:24:43 IST" duration-ms="3694" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:testPackage.LoginTestClass@49ec71f8]" started-at="2023-04-01T15:51:53 IST" name="aftermethod" finished-at="2023-04-01T15:51:57 IST" duration-ms="3472" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=VerifyLoginFunctionalityWithCorrectData status=SUCCESS method=LoginTestClass.VerifyLoginFunctionalityWithCorrectData()[pri:0, instance:testPackage.LoginTestClass@49ec71f8] output={null}]]]>
+                <![CDATA[[TestResult name=VerifyLoginFunctionalityWithCorrectData status=FAILURE method=LoginTestClass.VerifyLoginFunctionalityWithCorrectData()[pri:0, instance:testPackage.LoginTestClass@49ec71f8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method is-config="true" signature="beforemethod()[pri:0, instance:testPackage.LoginTestClass@49ec71f8]" started-at="2023-03-30T10:24:43 IST" name="beforemethod" finished-at="2023-03-30T10:24:43 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:testPackage.LoginTestClass@49ec71f8]" started-at="2023-04-01T15:51:57 IST" name="beforemethod" finished-at="2023-04-01T15:51:57 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforemethod -->
-        <test-method signature="VerifyLoginFunctionalityWithInCorrectData()[pri:0, instance:testPackage.LoginTestClass@49ec71f8]" started-at="2023-03-30T10:24:43 IST" name="VerifyLoginFunctionalityWithInCorrectData" finished-at="2023-03-30T10:24:43 IST" duration-ms="115" status="FAIL">
+        <test-method signature="VerifyLoginFunctionalityWithInCorrectData()[pri:0, instance:testPackage.LoginTestClass@49ec71f8]" started-at="2023-04-01T15:51:57 IST" name="VerifyLoginFunctionalityWithInCorrectData" finished-at="2023-04-01T15:51:57 IST" duration-ms="145" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[null]]>
@@ -43,7 +85,7 @@
               <![CDATA[java.lang.AssertionError: null
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.fail(Assert.java:106)
-at testPackage.LoginTestClass.VerifyLoginFunctionalityWithInCorrectData(LoginTestClass.java:80)
+at testPackage.LoginTestClass.VerifyLoginFunctionalityWithInCorrectData(LoginTestClass.java:101)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -76,7 +118,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyLoginFunctionalityWithInCorrectData -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:testPackage.LoginTestClass@49ec71f8]" started-at="2023-03-30T10:24:43 IST" name="aftermethod" finished-at="2023-03-30T10:24:43 IST" duration-ms="315" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:testPackage.LoginTestClass@49ec71f8]" started-at="2023-04-01T15:51:57 IST" name="aftermethod" finished-at="2023-04-01T15:51:57 IST" duration-ms="752" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -89,18 +131,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
         </test-method> <!-- aftermethod -->
       </class> <!-- testPackage.LoginTestClass -->
       <class name="testPackage.BaseClass">
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:testPackage.BaseClass@dd8ba08]" started-at="2023-03-30T10:22:07 IST" name="beforeTest" finished-at="2023-03-30T10:23:59 IST" duration-ms="112816" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:testPackage.BaseClass@dd8ba08]" started-at="2023-04-01T15:49:51 IST" name="beforeTest" finished-at="2023-04-01T15:51:21 IST" duration-ms="90364" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="aftertest()[pri:0, instance:testPackage.BaseClass@dd8ba08]" started-at="2023-03-30T10:24:43 IST" name="aftertest" finished-at="2023-03-30T10:24:43 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="aftertest()[pri:0, instance:testPackage.BaseClass@dd8ba08]" started-at="2023-04-01T15:51:57 IST" name="aftertest" finished-at="2023-04-01T15:51:57 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftertest -->

@@ -43,22 +43,22 @@ public class BaseClass
 	@AfterMethod
 	public void aftermethod(ITestResult result) throws IOException
 	{
-//		if(result.getStatus()==ITestResult.SUCCESS)
-//		{
-//			Screenshot.capturePageScreenshot(driver);
-//			System.out.println("Test Case Pass");
-//		}
-//		else if(result.getStatus()==ITestResult.FAILURE)
-//		{
-//			Screenshot.capturePageScreenshot(driver);
-//			System.out.println("Test Case Fail");
-//		}
-		
-		if(result.getStatus()==ITestResult.FAILURE)
+		if(result.getStatus()==ITestResult.SUCCESS)
+		{
+			String path = Screenshot.capturePageScreenshot(driver);
+			logger.pass("Test case is pass", MediaEntityBuilder.createScreenCaptureFromPath(path).build());
+		}
+		else if(result.getStatus()==ITestResult.FAILURE)
 		{
 			String path = Screenshot.capturePageScreenshot(driver);
 			logger.fail("Test case is failed", MediaEntityBuilder.createScreenCaptureFromPath(path).build());
 		}
+		
+//		if(result.getStatus()==ITestResult.FAILURE)
+//		{
+//			String path = Screenshot.capturePageScreenshot(driver);
+//			logger.fail("Test case is failed", MediaEntityBuilder.createScreenCaptureFromPath(path).build());
+//		}
 		
 		report.flush();
 	}
